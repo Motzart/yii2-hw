@@ -29,5 +29,11 @@ return [
             'errorAction' => 'site/error',
         ],
     ],
+    'modules' => [
+        'chat' => [
+            'class' => 'app\modules\chat\ChatModule',
+            // ... other configurations for the module ...
+        ],
+    ],
     'params' => $params,
 ];
