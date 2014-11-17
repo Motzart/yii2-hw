@@ -4,10 +4,10 @@ namespace app\modules\chat\controllers;
 
 use yii\web\Controller;
   /**
-   * DefaultChatController is the default controller to module Chat.
+   * DefaultController is the default controller to module Chat.
    */
 
-class DefaultChatController extends Controller
+class DefaultController extends Controller
 {
     /**
      * Index action is the default action in a controller.
