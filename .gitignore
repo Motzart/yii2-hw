@@ -1,6 +1,9 @@
 # yii console command
 /yii
 
+# comment project files
+ReadMe.txt
+
 # phpstorm project files
 .idea
 
