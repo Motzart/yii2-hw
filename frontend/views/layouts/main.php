@@ -25,14 +25,18 @@ AppAsset::register($this);
     <?php $this->beginBody() ?>
     <div class="wrap">
         <?php
-            NavBar::begin([
-                'brandLabel' => 'My Company',
+            NavBar::begin(
+                [
+                'brandLabel' => 'Hw 1-2-3 Yii2',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
-                    'class' => 'navbar-inverse navbar-fixed-top',
-                ],
-            ]);
+                                 'class' => 'navbar-inverse navbar-fixed-top',
+                             ],
+                ]
+            );
             $menuItems = [
+                ['label' => 'Members', 'url' => ['/iview/MembersForm']],
+                ['label' => 'ChatModule', 'url' => ['/chat/default/index']],
                 ['label' => 'Home', 'url' => ['/site/index']],
                 ['label' => 'About', 'url' => ['/site/about']],
                 ['label' => 'Contact', 'url' => ['/site/contact']],

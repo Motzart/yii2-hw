@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "members".
@@ -17,11 +18,12 @@ use Yii;
  * @property integer $status_id
  * @property integer $class_id
  *
- * @property Studygroups $class
  * @property Edstatus $status
+ * @property Studygroups $class
  * @property Studygroups $group
  */
-class Members extends \yii\db\ActiveRecord
+//class Members extends \yii\db\ActiveRecord
+class Members extends ActiveRecord
 {
     /**
      * @inheritdoc
@@ -65,17 +67,17 @@ class Members extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getClass()
+    public function getStatus()
     {
-        return $this->hasOne(Studygroups::className(), ['id' => 'class_id']);
+        return $this->hasOne(Edstatus::className(), ['id' => 'status_id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getStatus()
+    public function getClass()
     {
-        return $this->hasOne(Edstatus::className(), ['id' => 'status_id']);
+        return $this->hasOne(Studygroups::className(), ['id' => 'class_id']);
     }
 
     /**

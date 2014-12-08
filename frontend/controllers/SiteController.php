@@ -67,6 +67,10 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+//        $members = new \app\models\Members;
+//        $members = new Members;
+//        $data = $members->find()->all();
+//        return $this->render('index', array( 'data' => $data));
         return $this->render('index');
     }
 
